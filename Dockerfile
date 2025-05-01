@@ -1,9 +1,9 @@
 FROM python:3.10-slim
 
-# RUN useradd -m -u 1000 user
+RUN useradd -m -u 1000 user
 
-# USER user
-# ENV PATH="/home/user/.local/bin:$PATH"
+USER user
+ENV PATH="/home/user/.local/bin:$PATH"
 WORKDIR /app
 
 COPY requirements.txt .
